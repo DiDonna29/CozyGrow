@@ -5,14 +5,14 @@
 
 @layer base {
   :root {
-    /* Light Theme (Sunny Day) */
+    /* Day Theme (Sunny Day) - As per request */
     --background: 48 100% 94%; /* #FFF8E1 */
     --foreground: 14 21% 29%; /* #5D4037 */
-    --card: 45 100% 75%; /* #FFE082 */
+    --card: 45 100% 75%; /* #FFE082 (Contenedores) */
     --card-foreground: 14 21% 29%;
     --popover: 48 100% 94%;
     --popover-foreground: 14 21% 29%;
-    --primary: 34 100% 50%; /* #FF8F00 (Amber) */
+    --primary: 34 100% 50%; /* #FF8F00 (Amber / Acento) */
     --primary-foreground: 0 0% 100%;
     --secondary: 45 100% 85%;
     --secondary-foreground: 14 21% 29%;
@@ -25,7 +25,7 @@
     --border: 34 50% 80%;
     --input: 34 50% 85%;
     --ring: 34 100% 50%;
-    --radius: 1rem;
+    --radius: 1.5rem;
     --sidebar-background: 45 100% 75%;
     --sidebar-foreground: 14 21% 29%;
     --sidebar-primary: 34 100% 50%;
@@ -37,14 +37,14 @@
   }
 
   .dark {
-    /* Dark Theme (Nocturnal Cabin) */
-    --background: 11 26% 19%; /* #3E2723 */
+    /* Night Theme (Nocturnal Cabin) - As per request */
+    --background: 11 26% 19%; /* #3E2723 (Fondo) */
     --foreground: 48 100% 94%; /* #FFF8E1 */
-    --card: 13 24% 24%; /* #4E342E */
+    --card: 13 24% 24%; /* #4E342E (Contenedores) */
     --card-foreground: 48 100% 94%;
     --popover: 11 26% 19%;
     --popover-foreground: 48 100% 94%;
-    --primary: 38 100% 50%; /* #FFA000 */
+    --primary: 38 100% 50%; /* #FFA000 (Acento) */
     --primary-foreground: 11 26% 10%;
     --secondary: 13 24% 30%;
     --secondary-foreground: 48 100% 94%;
@@ -78,4 +78,15 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline;
   }
+}
+
+/* Custom scrollbar for a cozy feel */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  @apply bg-primary/20 rounded-full hover:bg-primary/40 transition-colors;
 }

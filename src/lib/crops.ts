@@ -12,6 +12,14 @@ export type Crop = {
 
 export type Season = 'spring' | 'summer' | 'autumn' | 'winter';
 
+export type PlantedCrop = {
+  instanceId: string;
+  cropId: string;
+  plantedDay: number;
+  harvestDay: number;
+  season: Season;
+};
+
 export const CROPS: Record<Season, Crop[]> = {
   spring: [
     { id: 'parsnip', nameEn: 'Parsnip', nameEs: 'Chirivía', growthTime: 4, value: 35, icon: '🥕', descriptionEn: 'A spring tuber that is easy to grow.', descriptionEs: 'Un tubérculo de primavera fácil de cultivar.' },
