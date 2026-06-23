@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "spring-farm",
+      "description": "A lush green spring farm with blooming flowers",
+      "imageUrl": "https://picsum.photos/seed/spring/800/400",
+      "imageHint": "spring farm"
+    },
+    {
+      "id": "summer-farm",
+      "description": "A sunny summer farm with golden wheat fields",
+      "imageUrl": "https://picsum.photos/seed/summer/800/400",
+      "imageHint": "summer farm"
+    },
+    {
+      "id": "autumn-farm",
+      "description": "A cozy autumn farm with pumpkins and red leaves",
+      "imageUrl": "https://picsum.photos/seed/autumn/800/400",
+      "imageHint": "autumn farm"
+    },
+    {
+      "id": "winter-farm",
+      "description": "A snowy winter farm with a cozy cabin",
+      "imageUrl": "https://picsum.photos/seed/winter/800/400",
+      "imageHint": "winter farm"
+    }
+  ]
+}
