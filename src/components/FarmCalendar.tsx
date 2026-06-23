@@ -17,33 +17,35 @@ export const FarmCalendar: React.FC = () => {
   const dayInSeason = ((currentDay - 1) % 28) + 1;
 
   return (
-    <Card className="border-2 border-primary/20 bg-card/60 backdrop-blur-md shadow-lg overflow-hidden">
+    <Card className="border-2 border-primary/20 bg-card/60 backdrop-blur-md shadow-lg overflow-hidden w-full">
       <CardHeader className="bg-primary/5 pb-4">
-        <CardTitle className="flex items-center gap-3 font-headline text-2xl text-foreground">
-          <CalendarIcon className="w-6 h-6 text-primary" />
-          {t.seasonalInfo}
+        <CardTitle className="flex items-center gap-3 font-headline text-2xl text-foreground truncate">
+          <CalendarIcon className="w-6 h-6 text-primary flex-shrink-0" />
+          <span className="truncate">{t.seasonalInfo}</span>
         </CardTitle>
       </CardHeader>
       <CardContent className="p-6">
-        <div className="flex flex-col items-center text-center space-y-4">
-          <div className="bg-background/80 w-full py-4 rounded-2xl border shadow-inner">
-            <p className="text-sm font-body uppercase tracking-widest text-muted-foreground mb-1">
+        <div className="flex flex-col items-center text-center space-y-4 overflow-hidden">
+          <div className="bg-background/80 w-full py-4 rounded-2xl border shadow-inner px-2">
+            <p className="text-sm font-body uppercase tracking-widest text-muted-foreground mb-1 truncate">
               {t[season]}
             </p>
-            <h4 className="text-5xl font-headline font-black text-primary">
+            <h4 className="text-3xl md:text-5xl font-headline font-black text-primary break-all">
               Day {dayInSeason}
             </h4>
           </div>
           
           <Button 
             onClick={nextDay}
-            className="w-full h-14 rounded-2xl text-lg font-headline shadow-lg hover:scale-105 transition-transform"
+            className="w-full h-14 rounded-2xl text-lg font-headline shadow-lg hover:scale-105 transition-transform flex items-center justify-center px-4"
           >
-            {t.language === 'en' ? 'Sleep / Next Day' : 'Dormir / Siguiente Día'}
-            <ArrowRight className="ml-2 w-5 h-5" />
+            <span className="truncate">
+              {t.language === 'en' ? 'Sleep / Next Day' : 'Dormir / Siguiente Día'}
+            </span>
+            <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
           </Button>
           
-          <p className="text-xs text-muted-foreground italic font-body">
+          <p className="text-xs text-muted-foreground italic font-body truncate w-full">
             {t.language === 'en' ? 'Total Days in Farm:' : 'Días Totales en Granja:'} {currentDay}
           </p>
         </div>
